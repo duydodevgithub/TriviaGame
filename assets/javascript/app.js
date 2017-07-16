@@ -2,21 +2,21 @@
 $( "#dialog" ).dialog({ autoOpen: false });
 var unAns = 0, correctAns = 0, incorrectAns = 0;
 $("#btnStart").on("click",function(){
-    $("#btnStart").off("click");
+    $(".btn").css("visibility","hidden");    
     $(".questionBank").css("visibility","visible");
     countDown();
 });
 
 
-$("#btnReset").on("click",function(){
-    reset();
-    $("#btnStart").on("click",function(){
-        $(".questionBank").css("visibility","visible");
-        countDown();
-    });
-    $(".questionBank").css("visibility","hidden");
+// $("#btnReset").on("click",function(){
+//     reset();
+//     $("#btnStart").on("click",function(){
+//         $(".questionBank").css("visibility","visible");
+//         countDown();
+//     });
+//     $(".questionBank").css("visibility","hidden");
     
-});
+// });
 
 //validate form function
 var solution = ["1a", "2a", "3b", "4c"];
@@ -38,23 +38,22 @@ function validate() {
         }
     }
     displayResult();
+    $("#dialog").on("dialogclose", function(){
+        $(".btn").css("visibility","visible");
+    });
     reset();
 }
 //display result function
 function displayResult() {
+    $(".btn").css("visibility","hidden");    
     $("#dialog").html("<span>Correct: </span>" + correctAns + "<br>" + "<span>Incorrect: </span>" + incorrectAns + "<br>" + "<span>Unanswered: </span>" + unAns)
-    $("#dialog").dialog( "open" );
-    $("#btnStart").on("click",function(){
-        $(".questionBank").css("visibility","visible");
-        countDown();
-    });
-    reset();
+    $("#dialog").dialog( "open" );    
 }
 
 //countdown timer function
 var timer;
 function countDown(){
-    var i = 211;
+    var i = 5;
     timer = setInterval(function(){
         i--;
         $(".alert").html("Time remaining: " + i);
@@ -71,6 +70,5 @@ function reset() {
     unAns = 0, correctAns = 0, incorrectAns = 0;
     ans1 = 0, ans2 = 0, ans3 = 0, ans4 = 0;
     $("[type='radio']:checked").prop("checked", false);
-    clearTimeout(timer);
     $(".questionBank").css("visibility","hidden");
 }

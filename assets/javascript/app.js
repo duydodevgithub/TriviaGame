@@ -53,7 +53,7 @@ function displayResult() {
 //countdown timer function
 var timer;
 function countDown(){
-    var i = 5;
+    var i = 30;
     timer = setInterval(function(){
         i--;
         $(".alert").html("Time remaining: " + i);

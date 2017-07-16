@@ -54,7 +54,7 @@ function displayResult() {
 //countdown timer function
 var timer;
 function countDown(){
-    var i = 21;
+    var i = 211;
     timer = setInterval(function(){
         i--;
         $(".alert").html("Time remaining: " + i);

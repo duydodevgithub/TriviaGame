@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Trivia Game</title>
+</head>
+<body>
+    <div id="dialog" title="Your Result"></div>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Trivia Game</h1>
+            <br>
+            <p>
+                <a class="btn btn-primary btn-lg" href="#" role="button" id="btnStart">Start here</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button" id="btnReset">Reset here</a>
+            </p>
+        </div>
+        <div class="container questionBank">
+            <div class="alert alert-success" role="alert">Time remaining</div>
+
+            <p class="question">1. What does HTML stand for?</p>
+
+            <ul class="answers">            
+            <input type="radio" name="q1" value="1a" id="q1a"><label for="q1a">Hyper Text Markup Language</label><br/>          
+            <input type="radio" name="q1" value="1b" id="q1b"><label for="q1b">Hyperlinks and Text Markup Language</label><br/>            
+            <input type="radio" name="q1" value="1c" id="q1c"><label for="q1c">Home Tool Markup Language</label><br/>            
+            <input type="radio" name="q1" value="1d" id="q1d"><label for="q1d">Hyper Tool Markup Language</label><br/>       
+            </ul>        
+
+            <p class="question">2. Who is making the Web standards?</p>        
+
+            <ul class="answers">            
+            <input type="radio" name="q2" value="2a" id="q2a"><label for="q2a">The World Wide Web Consortium</label><br/>           
+            <input type="radio" name="q2" value="2b" id="q2b"><label for="q2b">Mozilla</label><br/>            
+            <input type="radio" name="q2" value="2c" id="q2c"><label for="q2c">Google</label><br/>           
+            <input type="radio" name="q2" value="2d" id="q2d"><label for="q2d">Microsoft</label><br/>       
+            </ul>        
+
+            <p class="question">3. Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</p>        
+
+            <ul class="answers">            
+            <input type="radio" name="q3" value="3a" id="q3a"><label for="q3a">longdesc</label><br/>            
+            <input type="radio" name="q3" value="3b" id="q3b"><label for="q3b">alt</label><br/>            
+            <input type="radio" name="q3" value="3c" id="q3c"><label for="q3c">title</label><br/>           
+            <input type="radio" name="q3" value="3d" id="q3d"><label for="q3d">src</label><br/>       
+            </ul>        
+
+            <p class="question">4. In HTML, onblur and onfocus are:</p>        
+
+            <ul class="answers">           
+            <input type="radio" name="q4" value="4a" id="q4a"><label for="q4a">Event attributes</label><br/>            
+            <input type="radio" name="q4" value="4b" id="q4b"><label for="q4b">HTML elements</label><br/>            
+            <input type="radio" name="q4" value="4c" id="q4c"><label for="q4c">Style attributes</label><br/>            
+            <input type="radio" name="q4" value="4d" id="q4d"><label for="q4d">Object method</label><br/>        
+            </ul>     
+        </div>
+    </div>
+    <script src="assets/javascript/app.js"></script>    
+</body>
+</html>
